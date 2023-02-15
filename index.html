@@ -1,23 +1,32 @@
+<!--Document type declaration: HTML5-->
+<!DOCTYPE html>
 <html>
 
 <head>
-    <title>Create Account</title>
+    <title>Formulario registro</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <form action="./formulario.php" name="createAccount">
-        <fieldset>
-            <h3>Create Account</h3>
-            Nombre <br/>
-            <input type="text" name="nombre" maxlength="30" placeholder="Victoria" /> <br/> Email <br/>
-            <input type="email" name="email" maxlength="80" placeholder="victopradas@gmail.com" /> <br/> Clave <br/>
-            <input type="password" name="password" maxlength="8" /> <br/> Confirme su clave <br/>
-            <input type="password" name="conf_password" maxlength="8" /> <br/>
-        </fieldset>
 
-        <input type="submit" value="ENVIAR" />
-    </form>
+    <div class="cuadro-centrado">
+        <h2>Create Account</h2>
+        <form>
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" maxlength="30" placeholder="Victoria" required/>
 
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" maxlength="80" placeholder="victopradas@gmail.com" required/>
+
+            <label for="clave">Clave</label>
+            <input type="password" id="clave" name="password" maxlength="8" required/>
+
+            <label for="conf_clave">Confirme su clave</label>
+            <input type="password" id="conf_clave" name="conf_password" maxlength="8" required/>
+
+            <button type="submit">ENVIAR</button>
+        </form>
+    </div>
 </body>
 
 </html>

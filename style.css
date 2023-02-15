@@ -1,0 +1,51 @@
+body {
+    /*Permite el centrado vertical y horizontal*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+/*Crear un cuadro con borde y relleno
+Colocando el formulario dentro de este contenedor*/
+
+.cuadro-centrado {
+    width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form {
+    display: flex;
+    /*Cada campo en una linea apilandose verticalmente*/
+    flex-direction: column;
+}
+
+label {
+    /*Para separar entre etiquetas y entrada*/
+    margin-bottom: 10px;
+}
+
+input {
+    /*Aspecto más visual y llamativo*/
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+button {
+    /*Aspecto más visual y llamativo*/
+    padding: 10px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    /*Botón interactivo*/
+    cursor: pointer;
+}
