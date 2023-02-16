@@ -5,6 +5,9 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    /*Color del fondo*/
+    background-color: #242933;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
@@ -12,10 +15,25 @@ body {
 Colocando el formulario dentro de este contenedor*/
 
 .cuadro-centrado {
-    width: 400px;
-    padding: 20px;
-    border: 1px solid #ccc;
+    /*Color del fondo*/
+    background-color: #2f3644;
+    width: 320px;
+    /*Reducción del padding-top -> padding superior*/
+    padding: 10px 20px 20px;
+    border: 1px solid #373e50;
     border-radius: 5px;
+    color: #a9b7dd;
+    font-size: 15px;
+}
+
+.titulo {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    text-align: left;
+    color: #acbae1;
+    /*negrita pero no tanto como bold*/
+    font-weight: 600;
 }
 
 form {
@@ -26,7 +44,8 @@ form {
 
 label {
     /*Para separar entre etiquetas y entrada*/
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    color: #707996;
 }
 
 input {
@@ -41,11 +60,28 @@ input {
 button {
     /*Aspecto más visual y llamativo*/
     padding: 10px;
-    background-color: #3498db;
+    /*Color del fondo*/
+    background-color: #6c63ff;
+    /*Color de la letra*/
     color: #fff;
-    border: none;
+    /*Color del borde y anchura*/
+    border: 2px solid #0B0428;
+    /*Radio del borde-esquinas*/
     border-radius: 5px;
+    /*Tamaño de letra*/
     font-size: 16px;
-    /*Botón interactivo*/
+    /*Botón interactivo -> cursor dedo*/
     cursor: pointer;
+}
+
+
+/*Propiedades del botón activado*/
+
+button:active {
+    /*Color del fondo*/
+    background-color: #716bf1;
+    /*Color del borde*/
+    border: 2px solid #dfdde6;
+    /*Color de la letra*/
+    color: #fff;
 }
