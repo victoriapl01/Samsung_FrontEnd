@@ -57,6 +57,14 @@ input {
     font-size: 16px;
 }
 
+
+/*Estilo de icono de éxito cuando hay un error*/
+
+input.valid+.success_icon {
+    display: inline-block;
+    margin-left: 10px;
+}
+
 button {
     /*Aspecto más visual y llamativo*/
     padding: 10px;
@@ -84,4 +92,49 @@ button:active {
     border: 2px solid #dfdde6;
     /*Color de la letra*/
     color: #fff;
+}
+
+.error-message {
+    display: none;
+    color: red;
+    font-size: 12px;
+}
+
+
+/* Colores de validación */
+
+.campo-valido {
+    border-color: green;
+    border-width: 2px;
+}
+
+.campo-invalido {
+    border-color: red;
+    border-width: 2px;
+}
+
+
+/* Iconos de validación */
+
+.errorIcon {
+    background-image: url(images/error-icon.svg);
+    background-repeat: no-repeat;
+    background-size: 22px;
+}
+
+.successIcon {
+    background-image: url(images/success-icon.svg);
+    background-repeat: no-repeat;
+    background-size: 22px;
+}
+
+
+/* Mensajes de error */
+
+span {
+    color: red;
+    width: 60%;
+    margin: 0 0 0 0;
+    font-size: 12px;
+    display: block;
 }
