@@ -8,55 +8,86 @@ form.addEventListener('submit', function(event) {
     const clave = document.getElementById('clave');
     const conf_clave = document.getElementById('conf_clave');
 
+    let campos_validos = true;
+
     // Validación del campo nombre
     if (nombre.value === '') {
+        campos_validos = false;
         nombre.classList.add('campo-invalido');
+        nombre.classList.add('errorIcon');
         nombre.nextElementSibling.textContent = 'Rellene este campo';
     } else if (!/^[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ\s.,;:"'()¿?!_¡-]+$/g.test(nombre.value)) {
+        campos_validos = false;
         nombre.classList.add('campo-invalido');
+        nombre.classList.add('errorIcon');
         nombre.nextElementSibling.textContent = 'No se permiten caractéres numéricos';
     } else {
         nombre.classList.remove('campo-invalido');
+        nombre.classList.remove('errorIcon');
         nombre.classList.add('campo-valido');
+        nombre.classList.add('successIcon');
         nombre.nextElementSibling.textContent = '';
     }
 
     // Validación del campo email
     if (email.value === '') {
+        campos_validos = false;
         email.classList.add('campo-invalido');
+        email.classList.add('errorIcon');
         email.nextElementSibling.textContent = 'Rellene este campo';
     } else if (!/^\S+@\S+\.\S+$/.test(email.value)) {
+        campos_validos = false;
         email.classList.add('campo-invalido');
+        email.classList.add('errorIcon');
         email.nextElementSibling.textContent = 'Email inválido';
     } else {
         email.classList.remove('campo-invalido');
+        email.classList.remove('errorIcon');
         email.classList.add('campo-valido');
+        email.classList.add('successIcon');
         email.nextElementSibling.textContent = '';
     }
 
     // Validación del campo clave
     if (clave.value === '') {
+        campos_validos = false;
         clave.classList.add('campo-invalido');
+        clave.classList.add('errorIcon');
         clave.nextElementSibling.textContent = 'Rellene este campo';
     } else if (!/^[ \s\S]{1,8}$/.test(clave.value)) {
+        campos_validos = false;
         clave.classList.add('campo-invalido');
+        clave.classList.add('errorIcon');
         clave.nextElementSibling.textContent = 'No debe tener más de 8 caracteres';
     } else {
         clave.classList.remove('campo-invalido');
+        clave.classList.remove('errorIcon');
         clave.classList.add('campo-valido');
+        clave.classList.add('successIcon');
         clave.nextElementSibling.textContent = '';
     }
 
     // Validación del campo conf_clave
     if (conf_clave.value === '') {
+        campos_validos = false;
         conf_clave.classList.add('campo-invalido');
+        conf_clave.classList.add('errorIcon');
         conf_clave.nextElementSibling.textContent = 'Rellene este campo';
     } else if (conf_clave.value === clave.value) {
         conf_clave.classList.remove('campo-invalido');
+        conf_clave.classList.remove('errorIcon');
         conf_clave.classList.add('campo-valido');
+        conf_clave.classList.add('successIcon');
         conf_clave.nextElementSibling.textContent = '';
     } else {
+        campos_validos = false;
         conf_clave.classList.add('campo-invalido');
+        conf_clave.classList.add('errorIcon');
         conf_clave.nextElementSibling.textContent = 'La contraseñas no coinciden';
     }
+
+    if (campos_validos) {
+        alert('Inscripción completada correctamente');
+    }
+
 });

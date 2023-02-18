@@ -105,13 +105,17 @@ button:active {
 .errorIcon {
     background-image: url(images/error-icon.svg);
     background-repeat: no-repeat;
-    background-size: 22px;
+    background-size: 20px;
+    background-position: right 5% center;
+    padding-right: 10px;
 }
 
 .successIcon {
     background-image: url(images/success-icon.svg);
     background-repeat: no-repeat;
-    background-size: 22px;
+    background-size: 20px;
+    background-position: right 5% center;
+    padding-right: 10px;
 }
 
 
