@@ -44,25 +44,17 @@ form {
 
 label {
     /*Para separar entre etiquetas y entrada*/
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     color: #707996;
 }
 
 input {
     /*Aspecto más visual y llamativo*/
     padding: 10px;
-    margin-bottom: 20px;
     border-radius: 5px;
     border: 1px solid #ccc;
     font-size: 16px;
-}
-
-
-/*Estilo de icono de éxito cuando hay un error*/
-
-input.valid+.success_icon {
-    display: inline-block;
-    margin-left: 10px;
+    margin-top: 5px;
 }
 
 button {
@@ -92,12 +84,6 @@ button:active {
     border: 2px solid #dfdde6;
     /*Color de la letra*/
     color: #fff;
-}
-
-.error-message {
-    display: none;
-    color: red;
-    font-size: 12px;
 }
 
 
@@ -131,10 +117,11 @@ button:active {
 
 /* Mensajes de error */
 
-span {
+.error-message {
     color: red;
-    width: 60%;
-    margin: 0 0 0 0;
+    position: relative;
+    margin-top: 5px;
+    margin-bottom: 10px;
     font-size: 12px;
-    display: block;
+    display: inline-block;
 }
